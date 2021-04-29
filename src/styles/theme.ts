@@ -83,9 +83,10 @@ export const lightTheme = {
   colors: {
     background: colors.black[900],
     backgroundSecondary: colors.white,
-    text: colors.grey[700],
+    text: colors.white[50],
+    textSecondary: colors.grey[400],
     textHighLight: colors.primary[500],
-    title: colors.primary[700],
+    title: colors.primary[500],
     ...colors
   }
 }
