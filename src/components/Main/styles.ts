@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Wrapper = styled.main`
   width: 100%;
@@ -7,14 +7,23 @@ export const Wrapper = styled.main`
 `
 
 export const Title = styled.h1`
-  text-align: left;
-  font-size: 6rem;
+  ${({ theme }) => css`
+    text-align: left;
+    font-size: 6rem;
+    color: ${theme.colors.title};
+  `}
 `
 
 export const Description = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
-  margin-left: 7rem;
+  ${({ theme }) => css`
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 7rem;
+    color: ${theme.colors.textSecondary};
+    strong {
+      color: ${theme.colors.text};
+    }
+  `}
 `
 
 export const Links = styled.div`
@@ -22,10 +31,13 @@ export const Links = styled.div`
   font-size: 2.5rem;
   gap: 2rem;
   align-items: center;
+  margin: 4rem 0;
 `
 
 export const Line = styled.div`
-  width: 16rem;
-  height: 0.5rem;
-  background-color: black;
+  ${({ theme }) => css`
+    width: 16rem;
+    height: 2px;
+    background-color: ${theme.colors.textSecondary}; ;
+  `}
 `
