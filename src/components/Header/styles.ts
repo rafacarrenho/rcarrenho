@@ -11,6 +11,10 @@ export const Title = styled.h1`
     text-align: left;
     font-size: 6rem;
     color: ${theme.colors.title};
+
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
   `}
 `
 
@@ -22,6 +26,10 @@ export const Description = styled.h2`
     color: ${theme.colors.textSecondary};
     strong {
       color: ${theme.colors.text};
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-left: 0;
     }
   `}
 `

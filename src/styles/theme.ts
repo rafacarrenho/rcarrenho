@@ -1,5 +1,3 @@
-import { DefaultTheme } from "styled-components"
-
 const colors = {
   grey: {
     50: "#f9f9f9",
@@ -95,7 +93,7 @@ export const darkTheme = {
   theme: "dark",
   colors: {
     background: colors.black[900],
-    backgroundSecondary: colors.white,
+    backgroundSecondary: colors.black[800],
     text: colors.white[50],
     textSecondary: colors.grey[400],
     textHighLight: colors.primary[500],
