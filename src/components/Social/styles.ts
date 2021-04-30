@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
       color: ${theme.colors.textSecondary};
       font-size: 1.6rem;
       line-height: 3rem;
+      text-align: center;
 
       a {
         color: ${theme.colors.text};
