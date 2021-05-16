@@ -38,20 +38,20 @@ const Main = () => (
         </a>
       </S.Links>
       <S.Description>
-        <p>
+        <span>
           Olá, sou o <strong>Rafael Carrenho</strong>, desenvolvedor{" "}
           <strong>Front End</strong> especialista em <strong>JavaScript</strong>
           , em especial com <strong>ReactJS</strong> e <strong>NextJS</strong>{" "}
-          com mais de <strong>2 anos de experiencias</strong> no mesmos e{" "}
-          <strong>8 anos de experiencia</strong> na area de{" "}
+          com mais de <strong>2 anos de experiências</strong> no mesmos e{" "}
+          <strong>8 anos de experiência</strong> na área de{" "}
           <strong>tecnologia</strong>.
-        </p>{" "}
-        <p>
+        </span>
+        <span>
           Entre minhas habilidades que me permitem ser um profissional
           extremamente qualificado estão a ótima comunicação, organização,
           atenção aos detalhes, além de vontade e empenho para sempre estar
           melhorando.
-        </p>
+        </span>
       </S.Description>
     </S.Wrapper>
   </Container>

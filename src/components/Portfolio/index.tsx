@@ -1,5 +1,7 @@
 import { PortfolioItem, PortfolioItemProps } from "components/PortfolioItem"
 
+import * as S from "./styles"
+
 type PortfolioData = Omit<PortfolioItemProps, "reverse">
 
 const portfolioData: PortfolioData[] = [
@@ -39,10 +41,26 @@ const portfolioData: PortfolioData[] = [
 
 export const Portfolio = () => {
   return (
-    <div>
+    <S.Wrapper>
+      <S.Title>Portfólio</S.Title>
+      <S.SubTitle>
+        <S.Line />
+        <span>
+          Aqui você encontra alguns de meus projetos que são publicos e suas
+          respectivas técnologias, porem, tambem tenho outros privados que não
+          posso divulgar por questão contratuais, mas caso haja interesse me
+          chame que posso mostrar.
+        </span>
+      </S.SubTitle>
       {portfolioData.map((item, index) => {
-        return <PortfolioItem {...item} reverse={!(index % 2 === 0)} />
+        return (
+          <PortfolioItem
+            key={`${item.title}-${index}`}
+            {...item}
+            reverse={!(index % 2 === 0)}
+          />
+        )
       })}
-    </div>
+    </S.Wrapper>
   )
 }

@@ -3,11 +3,15 @@ import styled, { css, DefaultTheme } from "styled-components"
 type WrapperProps = {
   reverse: boolean | null
 }
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   ${({ reverse }: WrapperProps) => css`
     width: 100%;
-    padding: 3rem;
+    padding: 3rem 0;
     display: flex;
+
+    @media screen and (max-width: 775px) {
+      flex-direction: column;
+    }
     ${reverse && "flex-flow: row-reverse;"}
     gap: 40px;
     align-items: center;
@@ -26,11 +30,13 @@ type TextContainerProps = {
 
 export const TextContainer = styled.div`
   ${({ theme, reverse }: TextContainerProps) => css`
-    width: 50%;
+    /* @media screen and (min-width: 775px) {
+      width: 50%;
+    } */
     ${reverse && "text-align: right;"}
 
     h3 {
-      font-size: 4rem;
+      font-size: 3rem;
       color: ${theme.colors.white[50]};
       position: relative;
       margin-bottom: 2rem;
@@ -39,8 +45,8 @@ export const TextContainer = styled.div`
         content: "";
         width: 60px;
         position: absolute;
-        background-color: ${theme.colors.white[50]};
-        height: 4px;
+        background-color: ${theme.colors.primary[600]};
+        height: 3px;
         ${reverse ? "right: 0;" : "left: 0;"}
         bottom: -2px;
         border-radius: 2px;
@@ -56,11 +62,14 @@ export const TextContainer = styled.div`
       }
     }
 
-    span {
+    div {
       display: block;
       margin-top: 2rem;
       font-size: 2.5rem;
-      svg:not(:last-child) {
+      svg {
+        color: ${theme.colors.primary[400]};
+      }
+      span:not(:last-child) {
         margin-right: 16px;
       }
     }

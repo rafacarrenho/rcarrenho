@@ -15,11 +15,11 @@ export type PortfolioItemProps = {
 }
 
 const techsIcon = {
-  wordpress: <FaWordpress />,
-  react: <FaReact />,
-  sass: <FaSass />,
-  css: <FaCss3 />,
-  html: <FaHtml5 />
+  wordpress: <FaWordpress aria-label="wordpress" title="wordpress" />,
+  react: <FaReact aria-label="React" title="React" />,
+  sass: <FaSass aria-label="SASS" title="SASS" />,
+  css: <FaCss3 aria-label="CSS" title="CSS" />,
+  html: <FaHtml5 aria-label="HTML" title="HTML" />
 }
 
 export const PortfolioItem = ({
@@ -36,7 +36,11 @@ export const PortfolioItem = ({
       <S.TextContainer reverse={reverse}>
         <h3>{title}</h3>
         <p>{description}</p>
-        <span>{techs.map((item) => techsIcon[item])}</span>
+        <div>
+          {techs.map((item, index) => (
+            <span key={`${title}-${item}-${index}`}>{techsIcon[item]}</span>
+          ))}
+        </div>
         <button>{button.title}</button>
       </S.TextContainer>
     </S.Wrapper>

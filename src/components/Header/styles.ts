@@ -9,7 +9,7 @@ export const Wrapper = styled.main`
 export const Title = styled.h1`
   ${({ theme }) => css`
     text-align: left;
-    font-size: 6rem;
+    font-size: 5.5rem;
     color: ${theme.colors.title};
 
     @media screen and (max-width: 500px) {
@@ -24,6 +24,11 @@ export const Description = styled.h2`
     font-weight: 400;
     margin-left: 7rem;
     color: ${theme.colors.textSecondary};
+
+    span {
+      display: block;
+    }
+
     strong {
       color: ${theme.colors.text};
     }
