@@ -29,9 +29,16 @@ ${({ theme }) => css`
     }
   }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  body,
+  input,
+  textarea,
+  button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+
+  button {
+    cursor: pointer;
   }
 `}
 `
