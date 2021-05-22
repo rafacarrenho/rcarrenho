@@ -74,7 +74,9 @@ export const TextContainer = styled.div`
       }
     }
 
-    button {
+    a {
+      display: inline-block;
+      font-size: 1.5rem;
       margin: 20px 0;
       padding: 1rem 2rem;
       background-color: transparent;

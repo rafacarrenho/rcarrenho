@@ -8,6 +8,16 @@ export const GET_HOME_PAGE = gql`
       subtitle {
         html
       }
+      portfolioTitle
+    }
+    portfolios {
+      title
+      description
+      techs
+      image {
+        url
+      }
+      link
     }
   }
 `

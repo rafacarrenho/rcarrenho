@@ -4,13 +4,13 @@ import * as S from "./styles"
 type Techs = "wordpress" | "react" | "css" | "sass"
 
 export type PortfolioItemProps = {
-  image: string
+  image: {
+    url: string
+  }
   title: string
   description: string
   techs: Techs[]
-  button: {
-    title: string
-  }
+  link: string
   reverse: boolean
 }
 
@@ -26,13 +26,13 @@ export const PortfolioItem = ({
   image,
   title,
   description,
-  button,
   reverse = false,
+  link,
   techs
 }: PortfolioItemProps) => {
   return (
     <S.Wrapper reverse={reverse}>
-      <S.Image src={image} alt={title} />
+      <S.Image src={image.url} alt={title} />
       <S.TextContainer reverse={reverse}>
         <h3>{title}</h3>
         <p>{description}</p>
@@ -41,7 +41,8 @@ export const PortfolioItem = ({
             <span key={`${title}-${item}-${index}`}>{techsIcon[item]}</span>
           ))}
         </div>
-        <button>{button.title}</button>
+        {/* <button>Ver código</button> */}
+        <a href={link}>Ver projeto</a>
       </S.TextContainer>
     </S.Wrapper>
   )

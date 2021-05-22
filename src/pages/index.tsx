@@ -7,6 +7,9 @@ import { Techs } from "components/Techs"
 import client from "graphql/cliente"
 import { GetStaticProps } from "next"
 import { GET_HOME_PAGE } from "graphql/queries/getHomePage"
+import { PortfolioItemProps } from "components/PortfolioItem"
+
+type PortfolioData = Omit<PortfolioItemProps, "reverse">
 
 type HomeProps = {
   page: {
@@ -14,16 +17,18 @@ type HomeProps = {
     subtitle: {
       html: string
     }
+    portfolioTitle: string
   }
+  portfolios: PortfolioData[]
 }
 
-export default function Home({ page }: HomeProps) {
+export default function Home({ page, portfolios }: HomeProps) {
   return (
     <>
       <Header title={page.title} subtitle={page.subtitle.html} />
       <Container>
         <Techs />
-        <Portfolio />
+        <Portfolio title={page.portfolioTitle} portfolio={portfolios} />
       </Container>
       <Footer>
         <Container>
@@ -35,12 +40,12 @@ export default function Home({ page }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { page } = await client.request(GET_HOME_PAGE, {
+  const { page, portfolios } = await client.request(GET_HOME_PAGE, {
     slug: "home"
   })
 
   return {
     revalidate: 60,
-    props: { page }
+    props: { page, portfolios }
   }
 }
