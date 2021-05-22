@@ -6,44 +6,6 @@ import * as S from "./styles"
 const Social = () => {
   return (
     <S.Wrapper>
-      <span>@2021</span>
-      <span>
-        Criado com{" "}
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          NextJS
-        </a>
-        ,{" "}
-        <a
-          href="https://www.typescriptlang.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          TypeScript
-        </a>
-        ,{" "}
-        <a
-          href="https://styled-components.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Styled Components
-        </a>
-        ,{" "}
-        <a href="https://graphql.org/" target="_blank" rel="noreferrer">
-          GraphQL
-        </a>
-      </span>
-      <span>
-        Alimento com{" "}
-        <a href="https://graphcms.com/" target="_blank" rel="noreferrer">
-          GraphCMS
-        </a>{" "}
-        e hospedado na{" "}
-        <a href="https://vercel.com/" target="_blank" rel="noreferrer">
-          Vercel
-        </a>
-      </span>
-      <hr />
       <S.Links>
         <a
           href="https://www.behance.net/rafaelcarrenho"

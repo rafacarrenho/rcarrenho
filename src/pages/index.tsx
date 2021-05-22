@@ -18,6 +18,9 @@ type HomeProps = {
       html: string
     }
     portfolioTitle: string
+    footerText: {
+      html: string
+    }
   }
   portfolios: PortfolioData[]
 }
@@ -30,11 +33,7 @@ export default function Home({ page, portfolios }: HomeProps) {
         <Techs />
         <Portfolio title={page.portfolioTitle} portfolio={portfolios} />
       </Container>
-      <Footer>
-        <Container>
-          <Social />
-        </Container>
-      </Footer>
+      <Footer footerText={page.footerText.html} />
     </>
   )
 }

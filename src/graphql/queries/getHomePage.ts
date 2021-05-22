@@ -9,6 +9,9 @@ export const GET_HOME_PAGE = gql`
         html
       }
       portfolioTitle
+      footerText {
+        html
+      }
     }
     portfolios {
       title
