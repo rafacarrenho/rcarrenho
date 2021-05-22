@@ -42,7 +42,9 @@ export const PortfolioItem = ({
           ))}
         </div>
         {/* <button>Ver código</button> */}
-        <a href={link}>Ver projeto</a>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          Ver projeto
+        </a>
       </S.TextContainer>
     </S.Wrapper>
   )
