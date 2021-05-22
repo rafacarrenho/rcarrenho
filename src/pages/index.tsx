@@ -4,11 +4,23 @@ import Container from "components/Container"
 import Social from "components/Social"
 import { Portfolio } from "components/Portfolio"
 import { Techs } from "components/Techs"
+import client from "graphql/cliente"
+import { GetStaticProps } from "next"
+import { GET_HOME_PAGE } from "graphql/queries/getHomePage"
 
-export default function Home() {
+type HomeProps = {
+  page: {
+    title: string
+    subtitle: {
+      html: string
+    }
+  }
+}
+
+export default function Home({ page }: HomeProps) {
   return (
     <>
-      <Header />
+      <Header title={page.title} subtitle={page.subtitle.html} />
       <Container>
         <Techs />
         <Portfolio />
@@ -20,4 +32,15 @@ export default function Home() {
       </Footer>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { page } = await client.request(GET_HOME_PAGE, {
+    slug: "home"
+  })
+
+  return {
+    revalidate: 60,
+    props: { page }
+  }
 }
