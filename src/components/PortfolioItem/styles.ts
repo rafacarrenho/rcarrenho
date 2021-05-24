@@ -81,8 +81,8 @@ export const TextContainer = styled.div`
     a {
       display: inline-block;
       font-size: 1.5rem;
-      margin: 20px 0;
-      padding: 1rem 2rem;
+      margin: 10px 0;
+      padding: 1rem;
       background-color: transparent;
       border: 1px solid ${theme.colors.white[50]};
       color: ${theme.colors.white[50]};
@@ -92,6 +92,9 @@ export const TextContainer = styled.div`
       &:hover {
         background-color: ${theme.colors.white[50]};
         color: ${theme.colors.background};
+      }
+      & + a {
+        margin-left: 10px;
       }
     }
   `}

@@ -20,6 +20,7 @@ export type PortfolioItemProps = {
   description: string
   techs: Techs[]
   link: string
+  github: string
   reverse: boolean
 }
 
@@ -45,6 +46,7 @@ export const PortfolioItem = ({
   description,
   reverse = false,
   link,
+  github,
   techs
 }: PortfolioItemProps) => {
   return (
@@ -66,7 +68,9 @@ export const PortfolioItem = ({
             <span key={`${title}-${item}-${index}`}>{techsIcon[item]}</span>
           ))}
         </div>
-        {/* <button>Ver código</button> */}
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          Ver código
+        </a>
         <a href={link} target="_blank" rel="noopener noreferrer">
           Ver projeto
         </a>
