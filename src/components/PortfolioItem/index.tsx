@@ -1,4 +1,13 @@
-import { FaCss3, FaHtml5, FaReact, FaSass, FaWordpress } from "react-icons/fa"
+import {
+  FaCss3,
+  FaHtml5,
+  FaLeaf,
+  FaReact,
+  FaSass,
+  FaWordpress
+} from "react-icons/fa"
+import Image from "next/image"
+import { SiGraphql, SiStyledComponents } from "react-icons/si"
 import * as S from "./styles"
 
 type Techs = "wordpress" | "react" | "css" | "sass"
@@ -19,7 +28,15 @@ const techsIcon = {
   react: <FaReact aria-label="React" title="React" />,
   sass: <FaSass aria-label="SASS" title="SASS" />,
   css: <FaCss3 aria-label="CSS" title="CSS" />,
-  html: <FaHtml5 aria-label="HTML" title="HTML" />
+  html: <FaHtml5 aria-label="HTML" title="HTML" />,
+  leaflet: <FaLeaf aria-label="Leaflet" title="Leaflet" />,
+  graphql: <SiGraphql aria-label="graphql" title="graphql" />,
+  styledComponents: (
+    <SiStyledComponents
+      aria-label="styled components"
+      title="styled components"
+    />
+  )
 }
 
 export const PortfolioItem = ({
@@ -32,7 +49,15 @@ export const PortfolioItem = ({
 }: PortfolioItemProps) => {
   return (
     <S.Wrapper reverse={reverse}>
-      <S.Image src={image.url} alt={title} />
+      <S.ImageContainer>
+        <Image
+          src={image.url}
+          alt={title}
+          height={328}
+          width={525}
+          loading="lazy"
+        />
+      </S.ImageContainer>
       <S.TextContainer reverse={reverse}>
         <h3>{title}</h3>
         <p>{description}</p>

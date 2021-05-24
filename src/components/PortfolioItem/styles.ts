@@ -19,8 +19,11 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const Image = styled.img`
+export const ImageContainer = styled.div`
   width: 50%;
+  @media screen and (max-width: 775px) {
+    width: 100%;
+  }
 `
 
 type TextContainerProps = {
@@ -30,9 +33,10 @@ type TextContainerProps = {
 
 export const TextContainer = styled.div`
   ${({ theme, reverse }: TextContainerProps) => css`
-    /* @media screen and (min-width: 775px) {
-      width: 50%;
-    } */
+    width: 50%;
+    @media screen and (max-width: 775px) {
+      width: 100%;
+    }
     ${reverse && "text-align: right;"}
 
     h3 {
