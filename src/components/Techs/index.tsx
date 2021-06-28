@@ -96,7 +96,7 @@ export const Techs = () => {
             href={tech.url}
             key={tech.name}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             title={tech.name}
           >
             {tech.icon} {tech.name}

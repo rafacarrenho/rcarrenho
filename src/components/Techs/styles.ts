@@ -23,6 +23,13 @@ export const TechsContainer = styled.div`
     justify-content: center;
     gap: 50px;
     padding: 4rem 0;
+    overflow-x: unset;
+    @media screen and (max-width: 500px) {
+      justify-content: flex-start;
+      overflow-y: scroll;
+      flex-wrap: nowrap;
+    }
+
     a {
       background-color: transparent;
       color: ${theme.colors.white[50]};
