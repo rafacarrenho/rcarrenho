@@ -21,7 +21,7 @@ export const Portfolio = ({ title, portfolio }: PortfolioProps) => {
           <PortfolioItem
             key={`${item?.title}-${index}`}
             {...item}
-            reverse={!(index % 2 === 0)}
+            reverse={index % 2 !== 0}
           />
         )
       })}

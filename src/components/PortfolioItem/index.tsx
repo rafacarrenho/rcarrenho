@@ -58,7 +58,6 @@ export const PortfolioItem = ({
           loading="lazy"
           height={328}
           width={525}
-          // fill
         />
       </S.ImageContainer>
       <S.TextContainer reverse={reverse}>

@@ -12,8 +12,6 @@ import {
   FaWindows
 } from "react-icons/fa"
 import { AiFillGitlab, AiOutlineGithub } from "react-icons/ai"
-
-import * as S from "./styles"
 import {
   SiJest,
   SiMaterialUi,
@@ -22,6 +20,7 @@ import {
   SiTailwindcss,
   SiTypescript
 } from "react-icons/si"
+import * as S from "./styles"
 
 const techs = [
   {
@@ -86,6 +85,7 @@ const techs = [
   },
   { name: "Redux", icon: <SiRedux />, url: "https://redux.js.org/" }
 ]
+
 export const Techs = () => {
   return (
     <S.Wrapper>
