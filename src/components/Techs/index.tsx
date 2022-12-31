@@ -14,9 +14,9 @@ import {
 import { AiFillGitlab, AiOutlineGithub } from "react-icons/ai"
 import {
   SiJest,
-  SiMaterialUi,
+  SiMaterialui,
   SiRedux,
-  SiStyledComponents,
+  SiStyledcomponents,
   SiTailwindcss,
   SiTypescript
 } from "react-icons/si"
@@ -54,7 +54,7 @@ const techs = [
   { name: "SASS", icon: <FaSass />, url: "https://sass-lang.com/" },
   {
     name: "Styled Components",
-    icon: <SiStyledComponents />,
+    icon: <SiStyledcomponents />,
     url: "https://styled-components.com/"
   },
   {
@@ -64,7 +64,7 @@ const techs = [
   },
   {
     name: "Material UI",
-    icon: <SiMaterialUi />,
+    icon: <SiMaterialui />,
     url: "https://material-ui.com/pt/"
   },
   {

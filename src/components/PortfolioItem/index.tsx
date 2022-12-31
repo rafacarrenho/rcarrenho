@@ -7,7 +7,7 @@ import {
   FaWordpress
 } from "react-icons/fa"
 import Image from "next/legacy/image"
-import { SiGraphql, SiStyledComponents } from "react-icons/si"
+import { SiGraphql, SiStyledcomponents } from "react-icons/si"
 import * as S from "./styles"
 
 type Techs = "wordpress" | "react" | "css" | "sass"
@@ -33,7 +33,7 @@ const techsIcon = {
   leaflet: <FaLeaf aria-label="Leaflet" title="Leaflet" />,
   graphql: <SiGraphql aria-label="graphql" title="graphql" />,
   styledComponents: (
-    <SiStyledComponents
+    <SiStyledcomponents
       aria-label="styled components"
       title="styled components"
     />
