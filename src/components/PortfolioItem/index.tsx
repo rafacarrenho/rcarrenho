@@ -6,7 +6,7 @@ import {
   FaSass,
   FaWordpress
 } from "react-icons/fa"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { SiGraphql, SiStyledComponents } from "react-icons/si"
 import * as S from "./styles"
 
@@ -55,9 +55,10 @@ export const PortfolioItem = ({
         <Image
           src={image.url}
           alt={title}
+          loading="lazy"
           height={328}
           width={525}
-          loading="lazy"
+          // fill
         />
       </S.ImageContainer>
       <S.TextContainer reverse={reverse}>

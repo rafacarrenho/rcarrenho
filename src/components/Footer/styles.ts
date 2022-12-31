@@ -1,8 +1,14 @@
+import Container from "components/Container"
 import styled, { css } from "styled-components"
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.backgroundSecondary};
+  `}
+`
+
+export const WrapperContainer = styled(Container)`
+  ${({ theme }) => css`
     position: relative;
     display: flex;
     flex-direction: column;

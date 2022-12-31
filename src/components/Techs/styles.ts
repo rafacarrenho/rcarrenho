@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 export const Wrapper = styled.section`
-  padding: 3rem;
+  padding: 3rem 0;
 `
 
 export const Title = styled.h3`

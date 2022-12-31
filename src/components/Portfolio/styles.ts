@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 export const Wrapper = styled.section`
-  padding: 3rem;
+  padding: 2rem 0;
 `
 
 export const Title = styled.h3`
@@ -9,10 +9,6 @@ export const Title = styled.h3`
   font-size: 4rem;
   color: white;
   margin-top: 5rem;
-
-  @media screen and (max-width: 500px) {
-    font-size: 3rem;
-  }
 `
 
 export const SubTitle = styled.div`

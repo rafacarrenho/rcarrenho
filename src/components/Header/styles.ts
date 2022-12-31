@@ -3,17 +3,21 @@ import styled, { css } from "styled-components"
 export const Wrapper = styled.main`
   width: 100%;
   height: 100%;
-  padding: 3rem;
+  padding: 3rem 0;
 `
 
 export const Title = styled.h1`
   ${({ theme }) => css`
     text-align: left;
-    font-size: 5.5rem;
+    font-size: 2.8rem;
     color: ${theme.colors.title};
 
-    @media screen and (max-width: 500px) {
-      font-size: 3rem;
+    @media screen and (min-width: 500px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+      font-size: 5.6rem;
     }
   `}
 `

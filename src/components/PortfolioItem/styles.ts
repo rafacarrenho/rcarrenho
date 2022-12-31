@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
 
 export const ImageContainer = styled.div`
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media screen and (max-width: 775px) {
     width: 100%;
   }
