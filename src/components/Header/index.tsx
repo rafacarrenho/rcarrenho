@@ -1,14 +1,14 @@
 import * as S from "./styles"
 import { FaGithub, FaLinkedinIn, FaBehance } from "react-icons/fa"
 import { IoIosMail } from "react-icons/io"
-import Container from "../Container"
+import { Container } from "../Container"
 
-type MainProps = {
+type HeaderProps = {
   title: string
   subtitle: string
 }
 
-const Main = ({ title, subtitle }: MainProps) => (
+export const Header = ({ title, subtitle }: HeaderProps) => (
   <Container>
     <S.Wrapper>
       <S.Title>{title}</S.Title>
@@ -45,5 +45,3 @@ const Main = ({ title, subtitle }: MainProps) => (
     </S.Wrapper>
   </Container>
 )
-
-export default Main

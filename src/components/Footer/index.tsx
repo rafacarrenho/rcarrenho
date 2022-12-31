@@ -1,6 +1,5 @@
-import Container from "components/Container"
-import Social from "components/Social"
 import React from "react"
+import { Social } from "components/Social"
 import { HiCode } from "react-icons/hi"
 import * as S from "./styles"
 
@@ -8,7 +7,7 @@ type Props = {
   footerText: string
 }
 
-const Footer = ({ footerText }: Props) => {
+export const Footer = ({ footerText }: Props) => {
   return (
     <S.Wrapper>
       <S.WrapperContainer>
@@ -22,5 +21,3 @@ const Footer = ({ footerText }: Props) => {
     </S.Wrapper>
   )
 }
-
-export default Footer

@@ -3,7 +3,7 @@ import { FaBehance, FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { IoIosMail } from "react-icons/io"
 import * as S from "./styles"
 
-const Social = () => {
+export const Social = () => {
   return (
     <S.Wrapper>
       <S.Links>
@@ -35,5 +35,3 @@ const Social = () => {
     </S.Wrapper>
   )
 }
-
-export default Social

@@ -1,5 +1,4 @@
 import { PortfolioItem, PortfolioItemProps } from "components/PortfolioItem"
-
 import * as S from "./styles"
 
 type PortfolioData = Omit<PortfolioItemProps, "reverse">
