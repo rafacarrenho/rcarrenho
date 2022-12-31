@@ -1,4 +1,10 @@
 import { createGlobalStyle, css } from "styled-components"
+import { Poppins } from "@next/font/google"
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"]
+})
 
 const GlobalStyles = createGlobalStyle`
 ${({ theme }) => css`
@@ -33,7 +39,7 @@ ${({ theme }) => css`
   input,
   textarea,
   button {
-    font-family: "Poppins", sans-serif;
+    font-family: ${poppins.style.fontFamily}, sans-serif;
     font-weight: 400;
   }
 

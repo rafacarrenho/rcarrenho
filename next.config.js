@@ -5,10 +5,7 @@ const nextConfig = {
     domains: ["media.graphcms.com", "media.graphassets.com"]
   },
   compiler: {
-    styledComponents: {
-      displayName: true,
-      ssr: true
-    }
+    styledComponents: true
   }
 }
 
