@@ -14,6 +14,20 @@ ${({ theme }) => css`
     box-sizing: border-box;
   }
 
+  /* Scroll custom design */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.textSecondary};
+    border-radius: 20px;
+  }
+
   html {
     font-size: 62.5%;
   }
@@ -24,6 +38,7 @@ ${({ theme }) => css`
     height: 100%;
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
+    overflow: overlay;
   }
 
   a {
