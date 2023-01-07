@@ -11,6 +11,7 @@ export const Social = () => {
           href="https://www.behance.net/rafaelcarrenho"
           target="_blank"
           rel="noreferrer"
+          aria-label="Link para o Behance"
         >
           <FaBehance />
         </a>
@@ -18,6 +19,7 @@ export const Social = () => {
           href="https://www.linkedin.com/in/rafael-barbosa-carrenho-a98b3254/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Link para o LinkedIn"
         >
           <FaLinkedinIn />
         </a>
@@ -25,10 +27,14 @@ export const Social = () => {
           href="https://github.com/rafacarrenho"
           target="_blank"
           rel="noreferrer"
+          aria-label="Link para o GitHub"
         >
           <FaGithub />
         </a>
-        <a href="mailto:rafael.carrenho@hotmail.com">
+        <a
+          href="mailto:rafael.carrenho@hotmail.com"
+          aria-label="Link para o Email"
+        >
           <IoIosMail />
         </a>
       </S.Links>
