@@ -10,12 +10,13 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={darkTheme}>
       <Head>
         <title>Rafael Carrenho</title>
-        <meta name="theme-color" content="#06092B" />
+        <meta name="theme-color" content="#171917" />
         <link rel="shortcut icon" href="img/favicon.svg" type="image/svg" />
         <meta
           name="description"
           content="Rafael Carrenho desenvolvedor Front End - Site portfólio"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
