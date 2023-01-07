@@ -45,10 +45,12 @@ export const Description = styled.h2`
 
 export const Links = styled.div`
   display: flex;
-  font-size: 2.5rem;
   gap: 2rem;
   align-items: center;
-  margin: 4rem 0;
+
+  a {
+    font-size: 2.5rem;
+  }
 `
 
 export const Line = styled.div`
