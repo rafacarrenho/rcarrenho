@@ -77,7 +77,11 @@ const techs = [
     icon: <FaWindows />,
     url: "https://www.microsoft.com/pt-br/windows/"
   },
-  { name: "Linux", icon: <FaLinux />, url: "https://www.linux.org/" },
+  {
+    name: "Linux",
+    icon: <FaLinux />,
+    url: "https://www.linux.org/"
+  },
   {
     name: "MacOS",
     icon: <FaApple />,

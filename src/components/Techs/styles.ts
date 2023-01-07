@@ -22,13 +22,7 @@ export const TechsContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 50px;
-    padding: 4rem 0;
-    overflow-x: unset;
-    @media screen and (max-width: 500px) {
-      justify-content: flex-start;
-      overflow-y: scroll;
-      flex-wrap: nowrap;
-    }
+    padding: 4rem 0 0 0;
 
     a {
       background-color: transparent;
@@ -50,11 +44,20 @@ export const TechsContainer = styled.div`
         color: ${theme.colors.primary[700]};
       }
     }
-    /* font-size: 2.5rem;
-    gap: 2rem;
-    margin: 1rem 0 3rem;
-    font-size: 1.7rem;
-    color: ${theme.colors.textSecondary}; */
+
+    @media screen and (max-width: 500px) {
+      gap: 1.6rem;
+
+      a {
+        font-size: 1.2rem;
+
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin-right: 0.6rem;
+        }
+      }
+    }
   `}
 `
 

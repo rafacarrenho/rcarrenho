@@ -68,6 +68,10 @@ export const TextContainer = styled.div`
       strong {
         color: ${theme.colors.text};
       }
+
+      @media screen and (max-width: 500px) {
+        font-size: 1.4rem;
+      }
     }
 
     div {

@@ -18,6 +18,10 @@ export const SubTitle = styled.div`
     margin: 1rem 0 3rem;
     font-size: 1.7rem;
     color: ${theme.colors.textSecondary};
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.4rem;
+    }
   `}
 `
 

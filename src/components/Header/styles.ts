@@ -39,6 +39,7 @@ export const Description = styled.h2`
 
     @media screen and (max-width: 500px) {
       margin-left: 0;
+      font-size: 1.4rem;
     }
   `}
 `

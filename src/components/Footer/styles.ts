@@ -37,6 +37,10 @@ export const WrapperContainer = styled(Container)`
         cursor: pointer;
         font-weight: bold;
       }
+
+      @media screen and (max-width: 500px) {
+        font-size: 1.4rem;
+      }
     }
   `}
 `
