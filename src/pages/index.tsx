@@ -3,10 +3,9 @@ import { Header } from "components/Header"
 import { Container } from "components/Container"
 import { Portfolio } from "components/Portfolio"
 import { Techs } from "components/Techs"
-import { client } from "graphql/cliente"
 import { GetStaticProps } from "next"
-import { GET_HOME_PAGE } from "graphql/queries/getHomePage"
 import { PortfolioItemProps } from "components/PortfolioItem"
+import { getPage } from "services/pages/getPage"
 
 type PortfolioData = Omit<PortfolioItemProps, "reverse">
 
@@ -38,9 +37,7 @@ export default function Home({ page, portfolios }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { page, portfolios } = await client.request(GET_HOME_PAGE, {
-    slug: "home"
-  })
+  const { page, portfolios } = await getPage("home")
 
   return {
     revalidate: 60,
