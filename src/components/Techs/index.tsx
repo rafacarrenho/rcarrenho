@@ -14,7 +14,6 @@ import {
 import { AiFillGitlab, AiOutlineGithub } from "react-icons/ai"
 import {
   SiJest,
-  SiMaterialui,
   SiRedux,
   SiStyledcomponents,
   SiTailwindcss,
@@ -61,11 +60,6 @@ const techs = [
     name: "Bootstrap",
     icon: <FaBootstrap />,
     url: "https://getbootstrap.com/"
-  },
-  {
-    name: "Material UI",
-    icon: <SiMaterialui />,
-    url: "https://material-ui.com/pt/"
   },
   {
     name: "TailwindCSS",
