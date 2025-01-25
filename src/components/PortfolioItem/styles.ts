@@ -3,8 +3,8 @@ import styled, { css, DefaultTheme } from "styled-components"
 type WrapperProps = {
   reverse: boolean | null
 }
-export const Wrapper = styled.div`
-  ${({ reverse }: WrapperProps) => css`
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ reverse }) => css`
     width: 100%;
     padding: 3rem 0;
     display: flex;
@@ -35,8 +35,8 @@ type TextContainerProps = {
   theme: DefaultTheme
 }
 
-export const TextContainer = styled.div`
-  ${({ theme, reverse }: TextContainerProps) => css`
+export const TextContainer = styled.div<TextContainerProps>`
+  ${({ theme, reverse }) => css`
     width: 50%;
     @media screen and (max-width: 775px) {
       width: 100%;
