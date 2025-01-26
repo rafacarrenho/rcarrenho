@@ -2,6 +2,7 @@ import { AppProps } from "next/app"
 import Head from "next/head"
 import { ThemeProvider } from "styled-components"
 import { darkTheme } from "../styles/theme"
+import { GoogleAnalytics } from "nextjs-google-analytics"
 
 import GlobalStyles from "styles/global"
 
@@ -20,6 +21,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
+      <GoogleAnalytics trackPageViews gaMeasurementId="G-F2GWX5SRHR" />
     </ThemeProvider>
   )
 }

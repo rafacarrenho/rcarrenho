@@ -10,7 +10,16 @@ const withPWA = require("next-pwa")({
 const nextConfig = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ["media.graphcms.com", "media.graphassets.com"]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.graphcms.com"
+      },
+      {
+        protocol: "https",
+        hostname: "media.graphassets.com"
+      }
+    ]
   },
   compiler: {
     styledComponents: true
