@@ -18,6 +18,10 @@ function App({ Component, pageProps }: AppProps) {
           content="Rafael Carrenho desenvolvedor Front End - Site portfólio"
         />
         <link rel="manifest" href="/manifest.json" />
+        <title>
+          Rafael Carrenho – Desenvolvedor Front End Especialista em ReactJS e
+          NextJS
+        </title>
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
