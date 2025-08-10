@@ -29,5 +29,20 @@
     "@types/styled-components": "^5.1.26",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari major versions",
+      "last 2 Edge versions",
+      "not dead"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari major version",
+      "last 1 Edge version"
+    ]
   }
 }
