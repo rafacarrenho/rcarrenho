@@ -1,4 +1,5 @@
-import styled, { css, DefaultTheme } from "styled-components"
+import styled, { css } from "styled-components"
+import type { DefaultTheme } from "styled-components"
 
 type WrapperProps = {
   reverse: boolean | null

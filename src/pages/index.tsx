@@ -3,9 +3,10 @@ import { Header } from "components/Header"
 import { Container } from "components/Container"
 import { Portfolio } from "components/Portfolio"
 import { Techs } from "components/Techs"
-import { GetStaticProps } from "next"
-import { PortfolioItemProps } from "components/PortfolioItem"
 import { getPage } from "services/pages/getPage"
+
+import type { GetStaticProps } from "next"
+import type { PortfolioItemProps } from "components/PortfolioItem"
 
 type PortfolioData = Omit<PortfolioItemProps, "reverse">
 

@@ -1,6 +1,4 @@
 import * as S from "./styles"
-import { FaGithub, FaLinkedinIn, FaBehance } from "react-icons/fa"
-import { IoIosMail } from "react-icons/io"
 import { Container } from "../Container"
 import { Social } from "components/Social"
 

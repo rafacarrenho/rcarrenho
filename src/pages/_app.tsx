@@ -1,8 +1,9 @@
-import { AppProps } from "next/app"
 import Head from "next/head"
 import { ThemeProvider } from "styled-components"
 import { darkTheme } from "../styles/theme"
 import { GoogleAnalytics } from "nextjs-google-analytics"
+
+import type { AppProps } from "next/app"
 
 import GlobalStyles from "styles/global"
 

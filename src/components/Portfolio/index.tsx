@@ -1,4 +1,7 @@
-import { PortfolioItem, PortfolioItemProps } from "components/PortfolioItem"
+import { PortfolioItem } from "components/PortfolioItem"
+
+import type { PortfolioItemProps } from "components/PortfolioItem"
+
 import * as S from "./styles"
 
 type PortfolioData = Omit<PortfolioItemProps, "reverse">
