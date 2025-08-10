@@ -2,28 +2,17 @@
 
 const isProd = process.env.NODE_ENV === "production"
 
-const withPWA = require("next-pwa")({
-  dest: "public",
-  disable: !isProd
-})
+const withPWA = require("next-pwa")({ dest: "public", disable: !isProd })
 
 const nextConfig = withPWA({
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "media.graphcms.com"
-      },
-      {
-        protocol: "https",
-        hostname: "media.graphassets.com"
-      }
+      { protocol: "https", hostname: "*.graphcms.com" },
+      { protocol: "https", hostname: "*.graphassets.com" }
     ]
   },
-  compiler: {
-    styledComponents: true
-  }
+  compiler: { styledComponents: true }
 })
 
 module.exports = nextConfig
