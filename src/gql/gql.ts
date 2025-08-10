@@ -13,7 +13,10 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
-const documents = {
+type Documents = {
+    "\n  query getPages($slug: String) {\n    page(where: { slug: $slug }) {\n      title\n      slug\n      subtitle {\n        html\n      }\n      portfolioTitle\n      footerText {\n        html\n      }\n    }\n    portfolios {\n      title\n      description\n      techs\n      image {\n        url\n      }\n      link\n      github\n    }\n  }\n": typeof types.GetPagesDocument,
+};
+const documents: Documents = {
     "\n  query getPages($slug: String) {\n    page(where: { slug: $slug }) {\n      title\n      slug\n      subtitle {\n        html\n      }\n      portfolioTitle\n      footerText {\n        html\n      }\n    }\n    portfolios {\n      title\n      description\n      techs\n      image {\n        url\n      }\n      link\n      github\n    }\n  }\n": types.GetPagesDocument,
 };
 

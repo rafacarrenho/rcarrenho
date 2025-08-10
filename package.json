@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "codegen": "graphql-codegen --config codegen.ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "graphql": "^16.11.0",
@@ -20,13 +22,20 @@
     "styled-components": "6.1.19"
   },
   "devDependencies": {
+    "@eslint/js": "^9.33.0",
     "@graphql-codegen/cli": "^5.0.7",
     "@graphql-codegen/client-preset": "^4.8.3",
+    "@graphql-codegen/typed-document-node": "^5.1.2",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
     "@next/eslint-plugin-next": "^15.4.6",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.2.1",
     "@types/react": "^19.1.9",
     "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.33.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
