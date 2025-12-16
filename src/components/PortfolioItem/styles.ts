@@ -2,10 +2,10 @@ import styled, { css } from "styled-components"
 import type { DefaultTheme } from "styled-components"
 
 type WrapperProps = {
-  reverse: boolean | null
+  $reverse: boolean | null
 }
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ reverse }) => css`
+  ${({ $reverse }) => css`
     width: 100%;
     padding: 3rem 0;
     display: flex;
@@ -13,7 +13,7 @@ export const Wrapper = styled.div<WrapperProps>`
     @media screen and (max-width: 775px) {
       flex-direction: column;
     }
-    ${reverse && "flex-flow: row-reverse;"}
+    ${$reverse && "flex-flow: row-reverse;"}
     gap: 40px;
     align-items: center;
     margin-bottom: 4rem;
@@ -32,17 +32,17 @@ export const ImageContainer = styled.div`
 `
 
 type TextContainerProps = {
-  reverse: boolean
+  $reverse: boolean
   theme: DefaultTheme
 }
 
 export const TextContainer = styled.div<TextContainerProps>`
-  ${({ theme, reverse }) => css`
+  ${({ theme, $reverse }) => css`
     width: 50%;
     @media screen and (max-width: 775px) {
       width: 100%;
     }
-    ${reverse && "text-align: right;"}
+    ${$reverse && "text-align: right;"}
 
     h3 {
       font-size: 3rem;
@@ -56,7 +56,7 @@ export const TextContainer = styled.div<TextContainerProps>`
         position: absolute;
         background-color: ${theme.colors.primary[600]};
         height: 3px;
-        ${reverse ? "right: 0;" : "left: 0;"}
+        ${$reverse ? "right: 0;" : "left: 0;"}
         bottom: -2px;
         border-radius: 2px;
       }

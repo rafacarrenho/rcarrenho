@@ -50,7 +50,7 @@ export const PortfolioItem = ({
   techs
 }: PortfolioItemProps) => {
   return (
-    <S.Wrapper reverse={reverse}>
+    <S.Wrapper $reverse={reverse}>
       <S.ImageContainer>
         <Image
           src={image.url}
@@ -60,7 +60,7 @@ export const PortfolioItem = ({
           width={525}
         />
       </S.ImageContainer>
-      <S.TextContainer reverse={reverse}>
+      <S.TextContainer $reverse={reverse}>
         <h3>{title}</h3>
         <p>{description}</p>
         <div>
